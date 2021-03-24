@@ -1,0 +1,1 @@
+This repository contains the source code for the official NITK Hostels Website.
