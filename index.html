@@ -32,6 +32,21 @@
 			display: table;
 			clear: both;
 		}
+
+		.contact-us>ul {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		.inner>header>p {
+			font-weight: bold;
+			font-size: 2rem;
+			color: rgba(255, 255, 255, 0.7);
+
+		}
+
+		#header>.logo {
+			display: flex;
+		}
 	</style>
 	<style>
 		.filterDiv {
@@ -72,14 +87,53 @@
 			color: white;
 		}
 	</style>
+	<!-- media screen -->
+	<style>
+		@media screen and (max-width: 1680px) {
+			.inner>header>p {
+				font-size: 1.5rem;
+
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+			.inner>header>p {
+				font-size: 1rem;
+
+			}
+		}
+
+		@media screen and (max-width: 980px) {
+			
+		}
+
+		@media screen and (max-width: 736px) {
+			#row-col-flex{
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content:center;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			#row-col-flex{
+				display:flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content:center;
+			}
+		}
+	</style>
 </head>
 
 <body>
 
 	<!-- Header -->
 	<header id="header" class="alt">
-		<div class="logo"><img src="images/nitklogo.png" height="40" width="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-				href="index.html">NITK HOSTELS</a></div>
+		<div class="logo display-flex"><img src="images/svg/nitklogo_white.svg" height="40"
+				width="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">NITK HOSTELS</a></div>
 		<a href="#menu">Menu</a>
 	</header>
 
@@ -105,7 +159,7 @@
 	<!-- Banner -->
 	<section class="banner full">
 		<article>
-			<img src="images/slide01.jpg" alt="" />
+			<img src="images/webp/slide01.webp" alt="" />
 			<div class="inner">
 				<header>
 					<p>National Institute of Technology Karnataka Surathkal Hostels</p>
@@ -113,7 +167,7 @@
 			</div>
 		</article>
 		<article>
-			<img src="images/slide02.jpg" alt="" />
+			<img src="images/webp/slide02.webp" alt="" />
 			<div class="inner">
 				<header>
 					<p>National Institute of Technology Karnataka Surathkal Hostels</p>
@@ -121,7 +175,7 @@
 			</div>
 		</article>
 		<article>
-			<img src="images/slide03.jpg" alt="" />
+			<img src="images/webp/slide03.webp" alt="" />
 			<div class="inner">
 				<header>
 					<p>National Institute of Technology Karnataka Surathkal Hostels</p>
@@ -129,7 +183,7 @@
 			</div>
 		</article>
 		<article>
-			<img src="images/slide04.jpg" alt="" />
+			<img src="images/webp/slide04.webp" alt="" />
 			<div class="inner">
 				<header>
 					<p>National Institute of Technology Karnataka Surathkal Hostels</p>
@@ -137,7 +191,7 @@
 			</div>
 		</article>
 		<article>
-			<img src="images/slide05.jpg" alt="" />
+			<img src="images/webp/slide05.webp" alt="" />
 			<div class="inner">
 				<header>
 					<p>National Institute of Technology Karnataka Surathkal Hostels</p>
@@ -227,7 +281,7 @@
 	<!-- Two -->
 	<section id="two" class="wrapper style3">
 		<div class="header">
-			<div class="row">
+			<div class="row" id="row-col-flex">
 				<div class="column">
 					<h2 align="center"><strong>1960</h2></strong>
 					<p align="center"><strong>Year Established</strong></p>
@@ -325,22 +379,23 @@
 
 			<div class="container">
 				<div class="filterDiv sports activities">
-					<img src="images/pic01.jpg" height="200px" width="270px">
+					<img src="images/webp/pic01.webp" height="200px" width="270px">
 				</div>
 				<div class="filterDiv campus activities">
-					<img src="images/pic02.jpg" height="200px" width="270px">
+					<img src="images/webp/pic02.webp" height="200px" width="270px">
 				</div>
 				<div class="filterDiv fests">
-					<img src="images/pic03.jpg" height="200px" width="270px">
+					<img src="images/webp/pic03.webp" height="200px" width="270px">
 				</div>
 				<div class="filterDiv fests activities">
-					<img src="images/pic04.jpg" height="200px" width="270px">
+					<img src="images/webp/pic04.webp" height="200px" width="270px">
 				</div>
 			</div>
 		</div>
 	</section>
 	<script>
 		filterSelection("all")
+
 		function filterSelection(c) {
 			var x, i;
 			x = document.getElementsByClassName("filterDiv");
@@ -356,7 +411,9 @@
 			arr1 = element.className.split(" ");
 			arr2 = name.split(" ");
 			for (i = 0; i < arr2.length; i++) {
-				if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+				if (arr1.indexOf(arr2[i]) == -1) {
+					element.className += " " + arr2[i];
+				}
 			}
 		}
 
@@ -387,7 +444,7 @@
 
 	<!-- Footer -->
 	<footer id="footer">
-		<div class="row">
+		<div class="row " id="row-col-flex">
 			<div class="column">
 				<h4><b>General Links</h4></b>
 				<p>
@@ -419,33 +476,34 @@
 					<a href="https://iris.nitk.ac.in/hrms/" ,target=blank>IRIS Login</a>
 				</p>
 			</div>
-			<div class="column">
+			<div class="contact-us column">
 				<h4><b>Contact Us</b></h4>
 				<ul>
-					<li align="left">
+					<li align="center">
 						<b>Address:</b> National Institute of Technology Karnataka, Srinivasnagar PO, Surathkal,
 						Mangalore, India - 575025
 					</li>
-					<li align="left">
+					<li align="center">
 						<b>Tel:</b> +91 8242474000 (24 Lines)
 					</li>
-					<li align="left">
+					<li align="center">
 						<b>Fax:</b> +91 8242474033
 					</li>
-					<li align="left">
+					<li align="center">
 						<b>Email:</b>
 					</li>
-					<li align="left">
+					<li align="center">
 						<b>Facebook:</b>
 					</li>
 
-					<li align="left">
+					<li align="center">
 						<b>Instagram:</b>
 						<br>
 					</li>
 
 				</ul>
 			</div>
+
 			<div class="column">
 				<div class="mapouter">
 					<div class="gmap_canvas"><iframe width="350" height="270" id="gmap_canvas"
