@@ -1,253 +1,240 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>NITK Hostels</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="/assets/js/jquery.counterup.js"></script>
-		<!-- Compiled and minified CSS -->
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<title>NITK Hostels</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="/assets/js/jquery.counterup.js"></script>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-	 <!-- Compiled and minified JavaScript -->
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<style>
+* {
+	box-sizing: border-box;
+}
+/* Create four equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 25%;/* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.contact-us>ul {
+	color: rgba(255, 255, 255, 0.5);
+}
+.inner>header>p {
+	font-weight: bold;
+	font-size: 2rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+#header>.logo {
+	display: flex;
+}
 
-		<style>
-				* {
-				  box-sizing: border-box;
-				}
+.filterDiv {
+	float: left;
+	/* background-color: #2196F3; */
+			/* color: #ffffff; */
+	width: 280px;
+	line-height: 210px;
+	/* text-align: center; */
+	margin: 5px;
+	display: none;
+}
+.show {
+	display: block;
+}
+.container {
+	margin-top: 20px;
+	overflow: hidden;
+}
+/* Style the buttons */
+.btn {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+.btn:hover {
+	background-color: #ddd;
+}
+.btn.active {
+	background-color: #666;
+	color: white;
+}
+.galleryDiv .container { width: 100%;}		
+.galleryDiv .btn {padding: 2px 16px;}		
+</style>
+	<!-- media screen -->
+	<style>
+@media screen and (max-width: 1680px) {
+.inner>header>p {
+	font-size: 1.5rem;
+}
+}
 
-				/* Create four equal columns that floats next to each other */
-				.column {
-				  float: left;
-				  width: 25%;
+@media screen and (max-width: 1280px) {
+.inner>header>p {
+	font-size: 1rem;
+}
+}
 
-				   /* Should be removed. Only for demonstration */
-				}
+@media screen and (max-width: 980px) {
+}
 
-				/* Clear floats after the columns */
-				.row:after {
-				  content: "";
-				  display: table;
-				  clear: both;
-				}
-				</style>
-				<style>
-					.filterDiv {
-					  float: left;
-					  /* background-color: #2196F3; */
-					  /* color: #ffffff; */
-					  width: 280px;
-					  line-height: 210px;
-					  /* text-align: center; */
-					  margin: 5px;
-					  display: none;
-					}
+@media screen and (max-width: 736px) {
+#rowColFlex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+}
 
-					.show {
-					  display: block;
-					}
-
-					.container {
-					  margin-top: 20px;
-					  overflow: hidden;
-					}
-
-					/* Style the buttons */
-					.btn {
-					  border: none;
-					  outline: none;
-					  padding: 12px 16px;
-					  background-color: #f1f1f1;
-					  cursor: pointer;
-					}
-
-					.btn:hover {
-					  background-color: #ddd;
-					}
-
-					.btn.active {
-					  background-color: #666;
-					  color: white;
-					}
-					</style>
+@media screen and (max-width: 480px) {
+#rowColFlex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+}
+</style>
 	</head>
+
 	<body>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><img src="images/nitklogo.png" height="40" width="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">NITK HOSTELS</a></div>
-				<a href="#menu">Menu</a>
-			</header>
+<!-- Header -->
+<header id="header" class="alt">
+      <div class="logo display-flex"><img src="images/svg/nitklogo_white.svg" height="40"
+				width="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">NITK HOSTELS</a></div>
+      <a href="#menu">Menu</a> 
+      
+      <!-- Nav -->
+      <ul id="rep" class="dropdown-content">
+    <li><a href="#!">Students</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Wardens</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Staff</a></li>
+  </ul>
+      <nav id="menu">
+    <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <br>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="representatives.html" class="dropdown-trigger" dropdown-data="rep">Representatives</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="hostel_information.html">Hostel Information</a></li>
+          <li><a href="hostel_rules_regulations.html">Hostel Rules & Regulations</a></li>
+        </ul>
+  </nav>
+    </header>
+<!-- Banner -->
+<section class="banner full">
+      <article> <img src="images/webp/slide01.webp" alt="" />
+    <div class="inner">
+          <header>
+        <p>National Institute of Technology Karnataka Surathkal Hostels</p>
+      </header>
+        </div>
+  </article>
+      <article> <img src="images/webp/slide02.webp" alt="" />
+    <div class="inner">
+          <header>
+        <p>National Institute of Technology Karnataka Surathkal Hostels</p>
+      </header>
+        </div>
+  </article>
+      <article> <img src="images/webp/slide03.webp" alt="" />
+    <div class="inner">
+          <header>
+        <p>National Institute of Technology Karnataka Surathkal Hostels</p>
+      </header>
+        </div>
+  </article>
+      <article> <img src="images/webp/slide04.webp" alt="" />
+    <div class="inner">
+          <header>
+        <p>National Institute of Technology Karnataka Surathkal Hostels</p>
+      </header>
+        </div>
+  </article>
+      <article> <img src="images/webp/slide05.webp" alt="" />
+    <div class="inner">
+          <header>
+        <p>National Institute of Technology Karnataka Surathkal Hostels</p>
+      </header>
+        </div>
+  </article>
+    </section>
 
-		<!-- Nav -->
-		<ul id="rep" class="dropdown-content">
-<li><a href="#!">Students</a></li>
-<li class="divider"></li>
-<li><a href="#!">Wardens</a></li>
-<li class="divider"></li>
-<li><a href="#!">Staff</a></li>
-</ul>
-			<nav id="menu">
-				<ul class="links">
+<!-- One -->
+<section id="one" class="wrapper style2">
+      <div class="inner">
+    <div class="grid-style">
+          <div>
+        <div class="box">
+              <div class="content">
+            <p>Check the latest news and announcements</p>
+            <h2>Announcements</h2>
+            <h3>COVID 19 Protocols:</h3>
+            <p>We are taking utmost precautions to curb the spreading of novel CORONA 19 viruses by installing hand sanitizers and contact less thermometer at the entry of each hostel, at hostel office and at mess. The mess workers and hostel staff will be thoroughly checked for symptoms before entering the mess/hostel premises. Students are strictly not allowed outside the campus and outside food is strictly banned inside the campus. A separate hostel block and a mess has been reserved for symptomatic students for the quarantine purpose and a team of wardens and medicos has been formed as the first responders to handle such situations.</p>
+            <a href="#" class="button alt">Learn More</a> </div>
+            </div>
+      </div>
+          <div>
+        <div class="box">
+              <div class="content">
+            <p>Find the important reports and documents</p>
+            <h2>Reports and Documents</h2>
+            <ul>
+                  <li> <a href="https://www.nitk.ac.in/document/attachments/443/Fee_Structure_-_2019-20.pdf" target="_blank">Hostel Fee Structure 2019-20</a> </li>
+                  <li> <a href="https://www.nitk.ac.in/document/attachments/309/annual_report_english.pdf" target="_blank">Hostel Report 2018</a> </li>
+                </ul>
+            <a href="#" class="button alt">Learn More</a> </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </section>
 
-					<li><a href="index.html">Home</a></li><br>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="representatives.html" class="dropdown-trigger" dropdown-data="rep">Representatives</a></li>
-					<li><a href="facilities.html">Facilities</a></li>
-					<li><a href="hostel_information.html">Hostel Information</a></li>
-				</ul>
-			</nav>
+<!-- Two -->
+<section id="two" class="wrapper style3">
+      <div class="header">
+    <div class="row" id="rowColFlex">
+          <div class="column">
+        <h2 align="center"><strong>1960</strong></h2>
+        <p align="center"><strong>Year Established</strong></p>
+      </div>
+          <div class="column">
+        <h2 align="center"><strong>17</strong></h2>
+        <p align="center"><strong>Hostels</strong></p>
+      </div>
+          <div class="column">
+        <h2 align="center"><strong>5000+</strong></h2>
+        <p align="center"><strong>Students</strong></p>
+      </div>
+          <div class="column">
+        <h2 align="center"><strong>45</strong></h2>
+        <p align="center"><strong>Staff</strong></p>
+      </div>
+        </div>
+  </div>
+      <!-- <h3 style="float: left; width: 50%;"><span style="color:blue; font-weight:bold">16</span>   Blocks</h3>
+						<h3 style="float: right; width: 50%;"><span style="color:blue; font-weight:bold">5000+</span>   Students</h3> --> 
+      
+    </section>
 
-		<!-- Banner -->
-			<section class="banner full">
-				<article>
-					<img src="images/slide01.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>National Institute of Technology Karnataka Surathkal Hostels</p>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide02.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>National Institute of Technology Karnataka Surathkal Hostels</p>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide03.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>National Institute of Technology Karnataka Surathkal Hostels</p>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide04.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>National Institute of Technology Karnataka Surathkal Hostels</p>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide05.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>National Institute of Technology Karnataka Surathkal Hostels</p>
-						</header>
-					</div>
-				</article>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
-
-						<div>
-							<div class="box">
-
-								<div class="content">
-									<header class="align-center">
-										<p>Check the latest news and announcements</p>
-										<h2>Announcements</h2>
-									</header>
-									<ul>
-										<li>
-											Campaign on 'Swatchtha hi Sewa'
-										</li>
-
-										<li>
-											Opening of new Beauty Parlour in Girls Block
-										</li>
-										<li>
-											Instalation of new Toasters in Mess
-										</li>
-										<li>
-											Establishment of Central Laundary facility in Mega Tower
-										</li>
-										<li>
-											Opening of new cycle stands near Block I
-										</li>
-										<li>
-											Opening of new gym for Girls Hostel
-										</li>
-										<li>
-											Installation of new cloth dryers in GH5
-										</li>
-										<li>
-											Formation of the mess committee and starting a telegram channel for collecting mess feedback
-										</li>
-									</ul>
-									<footer class="align-center">
-										<a href="#" class="button alt">Learn More</a>
-									</footer>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-
-								<div class="content">
-									<header class="align-center">
-										<p>Find the important reports and documents</p>
-										<h2>Reports and Documents</h2>
-									</header>
-									<ul>
-										<li>
-											<a href = "https://www.nitk.ac.in/document/attachments/443/Fee_Structure_-_2019-20.pdf", target = blank>Hostel Fee Structure 2019-20</a>
-										</li>
-										<li>
-												<a href = "https://www.nitk.ac.in/document/attachments/309/annual_report_english.pdf", target = blank >Hostel Report 2018</a>
-										</li>
-									</ul>
-
-									<footer class="align-center">
-										<a href="#" class="button alt">Learn More</a>
-									</footer>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style3">
-				<div class="header">
-					<div class="row">
-							<div class="column">
-								<h2 align="center"><strong>1960</h2></strong>
-								<p align="center"><strong>Year Established</strong></p>
-							</div>
-							<div class="column">
-									<h2 align="center"><strong>17</h2></strong>
-									<p align="center"><strong>Hostels</strong></p>
-							</div>
-							<div class="column">
-									<h2 align="center"><strong>5000+</h2></strong>
-									<p align="center"><strong>Students</strong></p>
-							</div>
-							<div class="column">
-									<h2 align="center"><strong>45</h2></strong>
-									<p align="center"><strong>Staff</strong></p>
-							</div>
-
-
-						  </div>
-						  </div>
-						<!-- <h3 style="float: left; width: 50%;"><span style="color:blue; font-weight:bold">16</span>   Blocks</h3>
-						<h3 style="float: right; width: 50%;"><span style="color:blue; font-weight:bold">5000+</span>   Students</h3> -->
-
-			</section>
-
-		<!-- Three
+<!-- Three
 			<section id="three" class="wrapper style2">
 				 <div class="inner">
 					<header class="align-center">
@@ -280,8 +267,8 @@
 							<div class="image">
 								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
 							</div>
-						</div> -->
-						<!-- <div class="container">
+						</div> --> 
+<!-- <div class="container">
 						<div class="imgrow">
 							<div class="filterDiv all sports">
 							  <img src="images/slide01.jpg" alt="Snow" style="width:100%">
@@ -298,167 +285,155 @@
 						  </div>
 						  </div>
 
-				</div> -->
-			<!-- </section> -->
-			<!-- Control buttons -->
-			<section id="three" class="wrapper style2">
-				<div class="inner">
-					<header class="align-center">
+				</div> --> 
+<!-- </section> --> 
+<!-- Control buttons -->
+<section id="three" class="wrapper style2 galleryDiv">
+      <div class="inner">
 
-						<h2>Gallery</h2>
-					</header>
+          <h2>Gallery</h2>
 
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('campus')"> Campus</button>
-  <button class="btn" onclick="filterSelection('sports')"> Sports</button>
-  <button class="btn" onclick="filterSelection('fests')"> Fests</button>
-  <button class="btn" onclick="filterSelection('activities')"> Campus Activities</button>
-</div>
-
-		<div class="container">
-  			<div class="filterDiv sports activities">
-				<img src="images/pic01.jpg" height="200px" width="270px">
-  			</div>
-  			<div class="filterDiv campus activities">
-	  			<img src="images/pic02.jpg" height="200px" width="270px">
- 			</div>
-  			<div class="filterDiv fests">
-	  			<img src="images/pic03.jpg" height="200px" width="270px">
-  			</div>
-  			<div class="filterDiv fests activities">
-			  <img src="images/pic04.jpg" height="200px" width="270px">
-  			</div>
-		</div>
-	</div>
-</section>
+    <div id="myBtnContainer">
+          <button class="btn" onclick="filterSelection('campus')"> Campus</button>
+          <button class="btn" onclick="filterSelection('sports')"> Sports</button>
+          <button class="btn" onclick="filterSelection('fests')"> Fests</button>
+          <button class="btn" onclick="filterSelection('activities')"> Campus Activities</button>
+        </div>
+    <div class="container">
+          <div class="filterDiv sports activities"> <img src="images/webp/pic01.webp" height="200px" width="270px"> </div>
+          <div class="filterDiv campus activities"> <img src="images/webp/pic02.webp" height="200px" width="270px"> </div>
+          <div class="filterDiv fests"> <img src="images/webp/pic03.webp" height="200px" width="270px"> </div>
+          <div class="filterDiv fests activities"> <img src="images/webp/pic04.webp" height="200px" width="270px"> </div>
+        </div>
+  </div>
+    </section>
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+		filterSelection("all")
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+		function filterSelection(c) {
+			var x, i;
+			x = document.getElementsByClassName("filterDiv");
+			if (c == "all") c = "";
+			for (i = 0; i < x.length; i++) {
+				w3RemoveClass(x[i], "show");
+				if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+			}
+		}
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
+		function w3AddClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				if (arr1.indexOf(arr2[i]) == -1) {
+					element.className += " " + arr2[i];
+				}
+			}
+		}
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
+		function w3RemoveClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				while (arr1.indexOf(arr2[i]) > -1) {
+					arr1.splice(arr1.indexOf(arr2[i]), 1);
+				}
+			}
+			element.className = arr1.join(" ");
+		}
 
+		// Add active class to the current button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function () {
+				var current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+	</script> 
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="row">
-						<div class="column">
-								<h4><b>General Links</h4></b>
-								<p>
-									<a href="https://www.nitk.ac.in/" target=blank>NITK Website</a>
-									<br>
-									<a href="https://iris.nitk.ac.in/hrms/placement"target=blank>Career Development Centre</a>
-									<br>
-									<a href="#">Intranet</a><br><a href="http://ccc2.nitk.ac.in/"target=blank>Central Computer Centre</a>
-									<br><a href="http://library.nitk.ac.in/"target=blank>Central Library</a>
-									<br>
-									<a href="http://reo.nitk.ac.in/"target=blank>RE Office</a>
-								</p>
-								</div>
-					<div class="column">
-				<h4><b>Quick Links</h4></b>
-				<p>
-					<a href="http://vtour.nitk.ac.in/",target=blank>Virtual Tour</a>
-					<br>
-					<a href="https://prism.nitk.ac.in/",target=blank>PRISM NITK</a>
-					<br>
-					<a href="#">Student Portal</a>
-					<br>
-					<a href="https://www.facebook.com/TaskForceNITK/",target=blank>TaskForce NITK</a>
-					<br>
-					<a href="http://reo.nitk.ac.in/content/hostel-complaint-form",target=blank>Hostel Complaints Portal</a>
-					<br>
-					<a href="https://iris.nitk.ac.in/hrms/",target=blank>IRIS Login</a>
-				</p>
-				</div>
-				<div class="column">
-					<h4><b>Contact Us</b></h4>
-					<ul>
-						<li align="left">
-							<b>Address:</b> National Institute of Technology Karnataka, Srinivasnagar PO, Surathkal, Mangalore, India - 575025
-						</li>
-						<li align="left">
-							<b>Tel:</b> +91 8242474000 (24 Lines)
-						</li>
-						<li align="left">
-							<b>Fax:</b> +91 8242474033
-						</li>
-						<li align="left">
-							<b>Email:</b>
-						</li>
-						<li align="left">
-								<b>Facebook:</b>
-						</li>
+<!-- Footer -->
+<footer id="footer">
+      <div class="row" id="">
+    <div class="column">
+          <h4><b>General Links</b></h4>
+          
+          <p> <a href="https://www.nitk.ac.in/" target="_blank">NITK Website</a> <br>
+        <a href="https://iris.nitk.ac.in/hrms/placement" target="_blank">Career Development Centre</a> <br>
+        <a href="#">Intranet</a><br>
+        <a href="http://ccc2.nitk.ac.in/" target="_blank">Central Computer
+            Centre</a> <br>
+        <a href="http://library.nitk.ac.in/" target="_blank">Central Library</a> <br>
+        <a href="http://reo.nitk.ac.in/" target="_blank">RE Office</a> </p>
+        </div>
+    <div class="column">
+          <h4><b>Quick Links</b></h4>
+          
+          <p> <a href="http://vtour.nitk.ac.in/" target="_blank">Virtual Tour</a> <br>
+        <a href="https://prism.nitk.ac.in/" target="_blank">PRISM NITK</a> <br>
+        <a href="#">Student Portal</a> <br>
+        <a href="https://www.facebook.com/TaskForceNITK/" target="_blank">TaskForce NITK</a> <br>
+        <a href="http://reo.nitk.ac.in/content/hostel-complaint-form" target="_blank">Hostel Complaints
+            Portal</a> <br>
+        <a href="https://iris.nitk.ac.in/hrms/" target="_blank">IRIS Login</a> </p>
+        </div>
+    <div class="contact-us column">
+          <h4><b>Contact Us</b></h4>
+          <ul>
+        <li align="center"> <b>Address:</b> National Institute of Technology Karnataka, Srinivasnagar PO, Surathkal,
+              Mangalore, India - 575025 </li>
+        <li align="center"> <b>Tel:</b> +91 8242474000 (24 Lines) </li>
+        <li align="center"> <b>Fax:</b> +91 8242474033 </li>
+        <li align="center"> <b>Email:</b> </li>
+        <li align="center"> <b>Facebook:</b> </li>
+        <li align="center"> <b>Instagram:</b> <br>
+            </li>
+      </ul>
+        </div>
+    <div class="column">
+          <div class="mapouter">
+        <div class="gmap_canvas">
+              <iframe width="350" height="270" id="gmap_canvas"
+							src="https://maps.google.com/maps?q=national%20institute%20of%20technology%20karnataka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+							frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        <style>
+						.mapouter {
+							position: relative;
+							text-align: right;
+							height: 278px;
+							width: 267px;
+						}
 
-						<li align="left">
-							<b>Instagram:</b>
-							<br>
-						</li>
-
-					</ul>
-				</div>
-				<div class="column">
-						<div class="mapouter"><div class="gmap_canvas"><iframe width="350" height="270" id="gmap_canvas" src="https://maps.google.com/maps?q=national%20institute%20of%20technology%20karnataka&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:278px;width:267px;}.gmap_canvas {overflow:hidden;background:none!important;height:278px;width:267px;}</style></div>
-				</div>
-
-				</div>
-				<!-- <div class="container">
+						.gmap_canvas {
+							overflow: hidden;
+							background: none !important;
+							height: 278px;
+							width: 267px;
+						}
+					</style>
+      </div>
+        </div>
+  </div>
+      <!-- <div class="container">
 					 <ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul> -->
+					</ul> --> 
+      
+      <!-- <p>Designed and Developed by TaskForce NITK</p> --> 
+    </footer>
 
-				<!-- <p>Designed and Developed by TaskForce NITK</p> -->
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!-- Scripts --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/jquery.scrollex.min.js"></script> 
+<script src="assets/js/skel.min.js"></script> 
+<script src="assets/js/util.js"></script> 
+<script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,82 +1,353 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
-	<head>
-		<title>NITK Hostels</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="subpage">
+  <head>
+    <title>NITK Hostels</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- style-changes -->
+    <style>
+      #header > .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #header > .logo a {
+        padding-left: 0.5rem;
+      }
+      .column > .carda img {
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body class="subpage">
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">
+        <img src="images/svg/nitklogo_white.svg" height="42" width="42" /><a
+          href="index.html"
+          >NITK Hostels
+        </a>
+      </div>
+      <a href="#menu">Menu</a>
+    </header>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><img src="images/nitklogo.png" height="42" width="42"><a href="index.html">NITK Hostels </a></div>
-				<a href="#menu">Menu</a>
-			</header>
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <br />
+        <li><a href="about.html">About us</a></li>
+        <li><a href="representatives.html">Representatives</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="hostel_information.html">Hostel Information</a></li>
+        <li><a href="hostel_rules_regulations.html">Hostel Rules & Regulations</a></li>
+      </ul>
+    </nav>
 
-		<!-- Nav -->
-		<nav id="menu">
-			<ul class="links">
+    <!-- One -->
+    <section id="One" class="wrapper style3">
+      <div class="inner">
+        <header class="align-center">
+          <p style="font-size: 50px; color: white">Representatives</p>
+        </header>
+      </div>
+    </section>
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="column"></div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/chief-warden.jpg" alt="Chied Warden" style="width: 100%; height: 350px" />
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Dr. P.C. Deka</h2>
+            <p class="titlea" style="margin-top: -25px">Chief Warden</p>
 
-				<li><a href="index.html">Home</a></li><br>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="representatives.html">Representatives</a></li>
-				<li><a href="facilities.html">Facilities</a></li>
-				<li><a href="hostel_information.html">Hostel Information</a></li>
-			</ul>
-		</nav>
+            <p>
+              <a href="https://appmech.nitk.ac.in/faculty/paresh-chandra-deka" target="_blank"><button class="buttona" style="margin-top: -30px">
+                <p style="color: white">Contact</p>
+              </button></a>
+            </p>
+          </div>
+        </div>
+      </div>
+		<div class="column">
+        <div class="carda">
+          <img src="images/Dr.HarshaVardhan_FinanceWarden.jpg" alt="Jane" style="width: 100%; height: 350px" />
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Dr. HarshaVardhan</h2>
+            <p class="titlea" style="margin-top: -25px">Finance Warden</p>
 
-		<!-- One -->
-			<section id="One" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p style="font-size:50px;color:white;">Representatives</p>
+            <p>
+              <a href="https://mining.nitk.ac.in/faculty/harsha-vardhan-p-eng" target="_blank"><button class="buttona" style="margin-top: -30px">
+                <p style="color: white">Contact</p>
+              </button></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/Dr.Ajay.jpg" alt="Dr. Ajay"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Dr. Ajay</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
 
-					</header>
-				</div>
-			</section>
-			<!-- Row 1 --> 
-			<div class="row">
-				<div class="column">
-				</div>
-			  <div class="column">
-			    <div class="carda">
-			      <img src="images/chief-warden.jpg" alt="Jane" style="width:100%;height:350px">
-			      <div class="containera">
-			        <h2 style="margin-top:-40px;color:white;">Dr. P.C. Deka</h2>
-			        <p class="titlea" style="margin-top:-25px;">Chief Warden</p>
-			        
-			        <p><button class="buttona" style="margin-top:-30px"><p style="color:white;">Contact</p></button></p>
-			      </div>
-			    </div>
-			  </div>
+            <p>
+              <a href="https://mech.nitk.ac.in/faculty/ajay-kumar-yadav" target="_blank"><button class="buttona">
+                <p style="color: white">Contact</p>
+				  </button></a>
+            </p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="column"></div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/Dr.Sharanappa.jpg" alt="Warden" style="width: 100%; height: 350px" />
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Dr. Sharanappa</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
 
-			  <div class="column">
-			    <div class="carda">
-			      <img src="images/bpic.png" alt="Mike" style="width:100%;height:350px">
-			      <div class="containera">
-			        <h2 style="margin-top:-40px;color:white;" >NAME</h2>
-			        <p class="titlea" style="margin-top:-25px;">Chief Warden</p>
-			       
-			        <p><button class="buttona"><p style="color:white;">Contact</p></button></p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="column">
-			    <div class="carda">
-			      <img src="images/bpic.png" alt="John" style="width:100%;height:350px">
-			      <div class="containera">
-			        <h2 style="margin-top:-40px;color:white;">NAME</h2>
-			        <p class="titlea" style="margin-top:-25px;">Choef Warden</p>
-			        
-			        <p><button class="buttona"><p style="color:white;">Contact</p></button></p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-			<!-- Row 2 -->
-		<!-- 	<div class="row">
+            <p>
+              <a href="https://mech.nitk.ac.in/professor/sharnappa-joladarashi" target="_blank"><button class="buttona" style="margin-top: -30px">
+                <p style="color: white">Contact</p>
+				  </button></a>
+            </p>
+          </div>
+        </div>
+      </div>
+		<div class="column">
+        <div class="carda">
+          <img src="images/Kiran.png" alt="Kiran" style="width: 100%; height: 350px" />
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Kiran</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <a href="https://infotech.nitk.ac.in/faculty/kiran-m" target="_blank"><button class="buttona" style="margin-top: -30px">
+                <p style="color: white">Contact</p>
+				  </button></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="column"></div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+		<div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="column"></div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+		<div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="carda">
+          <img src="images/bpic.png" alt="Warden"style="width: 100%; height: 350px"/>
+          <div class="containera">
+            <h2 style="margin-top: -50px; color: white">Name Here</h2>
+            <p class="titlea" style="margin-top: -25px">Warden</p>
+
+            <p>
+              <button class="buttona">
+                <p style="color: white">Contact</p>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <section id="two" class="wrapper style2" style="margin-top: 0px; padding: 20px;">
+    <div class="inner">
+    <div class="box">
+          <div class="content">
+      <h3>Details of Hostel Office Staff:</h3>      		            
+      <table width="100%" border="1" cellspacing="10" cellpadding="10" style="border: 1px solid #f2f2f2;">
+  <tbody>
+    <tr>
+      <th scope="col">Sr.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Work allotted</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Smt. Baby Kishori</td>
+      <td>Superintendent Incharge</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Smt. Shubha</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Smt.UshaDevadiga</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sri. Dinakar</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Miss. Sharalatha</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Mrs. Maria Sweety D'Souza</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Miss. Sumana M.</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Smt. Yashoda</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Smt.Jyothi J Puthran</td>
+      <td>Attendant</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Smt. VijayalaxmiPrabha</td>
+      <td>Cashier</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Sri. Anand</td>
+      <td>Literate Assistant</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Sri Vasudeva</td>
+      <td>Junior Assistant</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Sri. SadashivaKudva P</td>
+      <td>Hostel Supervisor</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Sri Vasu</td>
+      <td>Hostel Assistant</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Sri. VishwanathSalian</td>
+      <td>Mess Assistant </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Smt. Sujatha N</td>
+      <td>Mess Assistant </td>
+    </tr>
+  </tbody>
+</table>
+	</div>
+    </div>
+     </div>
+	  </section>
+    <!-- Row 2 -->
+    <!-- 	<div class="row">
 			  <div class="column">
 			    <div class="carda">
 			      <img src="images/a.jpg" alt="Jane" style="width:100%;height:350px">
@@ -130,102 +401,111 @@
 				</div>
 			</div> -->
 
+    <!-- Footer -->
+    <footer id="footer">
+      <p>
+        <a href="www.nitk.ac.in">National Institute of Technology Karnataka</a>
+      </p>
 
- 
+      <div class="container">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon fa-facebook"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon fa-envelope-o"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        
+      </div>
+      <div class="copyright">&copy; TaskForce NITK. All rights reserved.</div>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html {
+        box-sizing: border-box;
+      }
 
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
 
+      .column {
+        float: left;
+        width: 20%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
 
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
 
+      .carda {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin-left: 40px;
+        margin-top: 30px;
+      }
 
+      .containera {
+        padding: 0 16px;
+      }
 
-		<!-- Footer -->
-		<footer id="footer">
-				<p><a href="www.nitk.ac.in">National Institute of Technology Karnataka</a></p>
+      .containera::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 
+      .title {
+        color: grey;
+      }
 
-				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-					<p>Designed and Developed by <a href="#">TaskForce NITK</a></p>
-				</div>
-				<div class="copyright">
-					&copy; TaskForce NITK. All rights reserved.
-				</div>
-			</footer>
+      .buttona {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 0px;
+        background-color: black;
 
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<style>
-			html {
-			  box-sizing: border-box;
-			}
-
-			*, *:before, *:after {
-			  box-sizing: inherit;
-			}
-
-			.column {
-			  float: left;
-			  width: 20%;
-			  margin-bottom: 16px;
-			  padding: 0 8px;
-
-			}
-
-			@media screen and (max-width: 650px) {
-			  .column {
-			    width: 100%;
-			    display: block;
-			  }
-			}
-
-			.carda {
-			  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-				margin-left: 40px;
-				margin-top: 30px;
-
-			}
-
-			.containera {
-			  padding: 0 16px;
-			}
-
-			.containera::after, .row::after {
-			  content: "";
-			  clear: both;
-			  display: table;
-			}
-
-			.title {
-			  color: grey;
-			}
-
-			.buttona {
-			  border: none;
-			  outline: 0;
-			  display: inline-block;
-			  padding: 0px;
-			  background-color: black;
-
-			  text-align: center;
-			  cursor: pointer;
-			  width: 100%;
-			}
-
-			.buttona:hover {
-			  background-color: #555;
-			}
-			</style>
-	</body>
+      .buttona:hover {
+        background-color: #555;
+      }
+    </style>
+  </body>
 </html>
